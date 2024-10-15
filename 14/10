@@ -1,0 +1,72 @@
+import os
+os.system ("cls")
+
+def num_neg(n1: float, n2: float) -> bool:
+    return n1 < 0 or n2 < 0
+    
+    if n1 < 0 or n2 < 0:
+        return True
+    else:
+        return False
+ 
+if num_neg(-3, -6): # == True:
+    print("um (ou dois) dos numeros sao negativos")
+else:
+    print("os numeros nao sao negativos")
+
+
+
+'''
+os.system("cls")
+def saudacao(usuario: str = "edson", hora: int = 19) -> None:
+    if hora < 12:
+        msg = "bom dia"
+    elif hora < 18:
+        msg = "boa tarde"
+    else:
+        msg = "boa noite"
+    print(f"{usuario}, {msg}")
+saudacao("maria") # saudacao (hora = 12)
+
+
+
+os.system("cls")
+def media_numeros(*args) -> float:
+    soma = 0
+    for numero in args:
+        soma += numero
+    return soma / len(args)
+
+
+print(media_numeros(5,4))
+
+
+
+os.system("cls")
+def menor_3n(n1: float, n2: float, n3: float) -> float:
+    menor = n1
+    if n2 < menor:
+        menor = n2
+    if n3 < menor:
+        menor = n3
+    return menor 
+
+def media_cp(n1: float, n2: float, n3: float) -> float:
+    return (n1 + n2 + n3 - menor_3n(n1,n2,n3)) / 2
+
+print(media_cp(4,5,6))
+'''
+os.system("cls")
+def media_cpb(n1: float, n2: float, n3: float) -> float:
+
+    def menor_3nb(n1: float, n2: float, n3: float) -> float:
+    menor = n1
+        if n2 < menor:
+            menor = n2
+        if n3 < menor:
+            menor = n3
+        return menor 
+
+    return (n1 + n2 + n3 - menor_3nb(n1,n2,n3)) / 2
+
+print(media_cpb(4,5,6))
